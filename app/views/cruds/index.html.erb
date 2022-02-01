@@ -1,0 +1,9 @@
+<h1> Index </h1>
+
+<% @cruds.each do |crud| %>
+  <p> First Name : <%= crud.f_name %></p>
+  <p> Last Name : <%= crud.l_name %></p>
+  <%= link_to "show", crud_path(crud) %>
+  <%= link_to "edit", edit_crud_path(crud) %>
+  <%= link_to "delete", crud_path(crud), method: :delete %>
+<% end %>
